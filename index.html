@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <title>Portafolio Elisa</title>
+</head>
+<body>
+  <header class="header">
+    <div class="u-wrapper">
+      <div class="header-content">
+        <img height="40" src="images/blob.png" alt="">  
+        <a class="btn primary" href="https://www.canva.com/design/DAGLKBb-ApI/r5YWzaQ2zv-DmCIoylNu7Q/edit?utm_content=DAGLKBb-ApI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">CV</a>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="u-wrapper">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="images/sebas.png" alt="">
+        </div>
+        <div class="hero-description">
+          <h1 class="h1">
+            <span class="h3">¡Hola a todos!</span>
+            <span>Soy Johan Diaz</span>
+          </h1>
+          <p>Un lider tecnico apasionado por crear soluciones que marquen la diferencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pre-projects">
+    <div class="u-wrapper">
+      <div class="pre-projects-content">
+        <p>A lo largo de mi experencia he podido llevar a cabo diferentes proyectos en diferentes lenguajes</p>
+        <p >
+          Aquí hay algunos que me gustaría compartir.
+        </p>
+        <img src="images/icons/arrow-down.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="project-list">
+    <div class="u-wrapper">
+      <div class="project-list-content">
+        <article class="project">
+          <div class="project-description">
+            <h2 class="project-title tag">
+              <span>
+                CineCampus
+              </span>
+            </h2>
+            <p class="project-copy">
+              Desarrolle un aplicativo en cual se encaraga de gestionar la compra de tickets de un cine, por internet
+              implementando para el backend una base de datos en mongodb y creacion de apis, y un para el diseño tecnologias como Vue
+            </p>
+            <div class="project-cta">
+              <a  href="https://github.com/Pilotebas/cinemaCampus" class="btn primary full">Ver proyecto</a>
+            </div>
+            <div class="fotos_tecnologias">
+              <img src="images/node-express.png" alt="">
+              <img src="images/mongo.png" alt="">
+              <img src="images/vue.png" alt="">
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="images/cinecaampus.png" alt="">
+          </div>
+        </article>
+        <article class="testimony">
+          <div class="testimony-image">
+            <img src="" alt="foto">
+          </div>
+          <p class="testimony-copy">
+            "Testimonio".
+          </p>
+          <p class="testimony-title">
+            Persona
+          </p>
+        </article>
+        <article class="project">
+          <div class="project-description">
+            <h2 class="project-title tag">
+              <span>
+                Liga BetPlay
+              </span>
+            </h2>
+            <p class="project-copy">
+              Gestion de Base de datos y liderazgo en equipo Scrum
+            </p>
+            <div class="project-cta">
+              <a  href="https://github.com/Pilotebas/cinemaCampus" class="btn primary full">Ver proyecto</a>
+            </div>
+            <div class="fotos_tecnologias">
+              <img src="images/node.png" alt="">
+              <img src="images/mongo.png" alt="">
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="images/ligaBetplay.png" alt="">
+          </div>
+        </article>
+        <article class="testimony">
+          <div class="testimony-image">
+            <img src="" alt="foto">
+          </div>
+          <p class="testimony-copy">
+            "Testimonio".
+          </p>
+          <p class="testimony-title">
+            Persona
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="u-wrapper">
+      <div class="contact-content">
+
+        <form id="form" action="" class="form">
+          <h3 class="tag"><span>HABLEMOS</span></h3>
+          <label for="name">Nombre Completo <span>*</span></label>
+          <input name="name" required type="text" id="name" placeholder="Johan Diaz">
+          <label for="email">Correo electrónico <span>*</span></label>
+          <input name="email" type="text" id="email" required placeholder="josedima01@gmail.com">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+          <button type="submit" class="btn primary full">enviar mensaje</button>
+        </form>
+        <a href="mailto:josedima01@gmail.com.com" id="trucazo">jojojoj</a>
+      </div>
+    </div>
+  </section>
+
+  </footer>
+  <script>
+    const $form = document.querySelector('#form')
+    $form.addEventListener('submit', handleSubmit)
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      trucazo.setAttribute('href', `mailto:josedima01@gmail.com.com?subject=${form.get('name')}${form.get('email')}&body=${form.get('message')}`)
+      trucazo.click()
+    }
+  </script>
+
+</body>
+</html>
